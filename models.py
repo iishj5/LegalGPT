@@ -1,6 +1,6 @@
 from google.generativeai import configure, list_models
 
-configure(api_key="AIzaSyCVhxMSqepS_weVa2VFUM10tMM57HGFX6c")
+configure(api_key="API_KEY")
 
 models = list_models()
 print([m.name for m in models])

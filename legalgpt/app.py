@@ -166,7 +166,7 @@ ANSWER:
 prompt = PromptTemplate(template=prompt_template,
                         input_variables=['context', 'question', 'chat_history'])
 
-api_key = "AIzaSyAo1MwoUb0zvVLLBGZAj8Jy2SGkKbF561M"
+api_key = "API_KEY"
 llm = ChatGoogleGenerativeAI(model="models/gemini-1.5-flash", temperature=0.5, max_tokens=1024, google_api_key=api_key)
 
 qa = ConversationalRetrievalChain.from_llm(llm=llm, memory=st.session_state.memory, retriever=db_retriever, combine_docs_chain_kwargs={'prompt': prompt})
